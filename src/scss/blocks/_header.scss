@@ -1,0 +1,11 @@
+.header {
+  border-radius: 20px;
+  background: var(--desktop-white);
+  
+  &__container {
+    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: calc(99px + 64px) auto 132px 205px;
+    align-items: center;
+  }
+}

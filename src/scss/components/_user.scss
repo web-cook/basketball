@@ -1,0 +1,21 @@
+.user {
+  border-radius: 20px;
+  padding: 3px 3px 3px 16px;
+  background: var(--desktop-background);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__name {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
+  }
+
+  &__photo {
+  }
+}

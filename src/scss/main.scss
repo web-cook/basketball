@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Druk Wide Cyr", sans-serif;
+  src: url("../fonts/Druk/DrukWideCyr-Bold.woff") format('woff'),
+      url("../fonts/Druk/DrukWideCyr-Bold.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Base */
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+
+/* Blocks */
+
+@import "./components/*.scss";
+@import "./blocks/*.scss";
+

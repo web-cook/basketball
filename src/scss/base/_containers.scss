@@ -1,0 +1,9 @@
+.wrapper {
+  padding: var(--wrapper-padding);
+  margin: 0 auto;
+  max-width: calc(1920px - (var(--wrapper-padding) * 2));
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
