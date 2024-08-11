@@ -1,11 +1,44 @@
 .selection {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  border-radius: 14px;
+  background: var(--desktop-primary-green);
+  
   &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--desktop-white);
   }
 
   &__buttons {
+    max-width: 545px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
   &__btn {
+    width: fit-content;
+    padding: 7px 12px 8px 12px;
+    border-radius: 39px;
+    background: var(--desktop-white-20);
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-white);
+
+    &:last-child {
+      background: var(--desktop-white);
+      color: var(--desktop-primary-green);
+    }
   }
 }

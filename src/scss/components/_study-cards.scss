@@ -1,28 +1,125 @@
 .study-cards {
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 
-  &__title {
-  }
-
-  &__content {
+  &::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: var(--desktop-grey-200);
   }
 }
 .study-card {
+  padding: 20px 0;
+  position: relative;
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background: var(--desktop-grey-200);
+    }
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
+  }
 
   &__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
   }
 
   &__image {
+
   }
 
   &__text {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
   }
 
   &__date {
+    width: fit-content;
+    border-radius: 39px;
+    padding: 8px 12px;
+    background: var(--desktop-background);
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
   }
 }
 .study-card--video-lessons {
 }
 .study-card--articles {
+  .study-card__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .study-card__text {
+    max-width: 464px;
+  }
 }
 .study-card--terms {
+  .study-card__content {
+    gap: 4px;
+  }
+
+  .study-card__text {
+    :last-child {
+      color: var(--desktop-white);
+      background: var(--desktop-black);
+    }
+  }
+
+  .study-card__date {
+    &:last-child {
+      background: var(--desktop-black);
+      color: var(--desktop-white);
+    }
+  }
 }

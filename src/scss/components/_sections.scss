@@ -1,8 +1,35 @@
 .sections {
+  grid-row: 1 / span 2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: url('../img/sections-bg.png') no-repeat center/cover;
+  border-radius: 20px;
 
   &__title {
+    max-width: 753px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--desktop-white);
   }
 
   &__text {
+    padding: 8px 12px;
+    border-radius: 39px;
+    background: var(--desktop-white);
+    width: fit-content;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-primary-green);
   }
 }

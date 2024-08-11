@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   padding: var(--wrapper-padding);
   margin: 0 auto;
   max-width: calc(1920px - (var(--wrapper-padding) * 2));

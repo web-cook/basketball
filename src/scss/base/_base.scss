@@ -4,4 +4,9 @@ html {
 
 body {
   background: var(--desktop-grey-100);
+
+  background-image: url("../img/basketball-ball-bg.png");
+  background-size: auto;
+  background-position: bottom 0 right 0;
+  background-repeat: no-repeat;
 }

@@ -1,8 +1,9 @@
 .apps {
+  display: flex;
+  gap: 36px;
 }
 .app {
-}
-.app--appstore {
-}
-.app--googleplay {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
