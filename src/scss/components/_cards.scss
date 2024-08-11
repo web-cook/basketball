@@ -1,13 +1,150 @@
 .cards {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
 }
 .card {
+  position: relative;
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  min-height: 784px;
 
-		&__image {
-		}
+  border-radius: 20px;
+  background: var(--desktop-white);
+  cursor: pointer;
+  transition: var(--transition-default);
+  overflow: hidden;
 
-		&__title {
-		}
+  &:hover {
+    background: var(--desktop-black);
 
-		&__text {
-		}
+    .card__title {
+      color: var(--desktop-white);
+    }
+
+    .card__text {
+      color: var(--desktop-white);
+    }
+
+    .card__image {
+      transform: translateY(-74px);
+    }
+
+    .card__content {
+      transform: translateY(-96px);
+    }
+
+    .card__button {
+      bottom: 24px;
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    border-radius: 20px;
+    transition: var(--transition-default);
+  }
+
+  &__content {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition-default);
+    position: relative;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
+  }
+
+  &__text {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--desktop-black);
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -48px;
+    opacity: 0;
+    left: 24px;
+    width: calc(100% - 48px);
+
+    border-radius: 16px;
+    flex-basis: 100%;
+    background: var(--desktop-primary-orange);
+    transition: var(--transition-default);
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 24px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-white);
+
+    &-icon {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: var(--transition-default);
+    }
+  }
+
+  &.card--ball {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--ball {
+    .card__image {
+      position: absolute;
+      top: -108px;
+      right: -188px;
+    }
+
+    .card__content {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .card__title {
+      white-space: pre-line;
+    }
+
+    .card__text {
+      max-width: 440px;
+    }
+  }
+
+  &--tournaments {
+    .card__title {
+      white-space: pre-line;
+    }
+
+    .card__text {
+      max-width: 435px;
+    }
+  }
 }
