@@ -1,16 +1,30 @@
-<section class="hero">
+<section id="hero" class="hero">
   <div class="hero__container">
     <h1 class="hero__title title-main title-main--hero">Найди с кем поиграть в баскет</h1>
     <ul class="hero__list">
-      <li class="hero__item">
-        <a href="#" class="hero__link btn-main">играй</a>
+      <li class="hero__item" data-bg-image="1">
+        <a href="#game" class="hero__link btn-main">играй</a>
+        <svg class="hero__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.3553 4V8.28571H1V14.7143H12.3553V19L23 11.5L12.3553 4Z" fill="white" />
+        </svg>
       </li>
-      <li class="hero__item">
-        <a href="#" class="hero__link btn-main">учись</a>
+      <li class="hero__item" data-bg-image="2">
+        <a href="#study" class="hero__link btn-main">учись</a>
+        <svg class="hero__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.3553 4V8.28571H1V14.7143H12.3553V19L23 11.5L12.3553 4Z" fill="white" />
+        </svg>
       </li>
-      <li class="hero__item">
-        <a href="#" class="hero__link btn-main">смотри</a>
+      <li class="hero__item" data-bg-image="3">
+        <a href="#watch" class="hero__link btn-main">смотри</a>
+        <svg class="hero__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.3553 4V8.28571H1V14.7143H12.3553V19L23 11.5L12.3553 4Z" fill="white" />
+        </svg>
       </li>
     </ul>
+  </div>
+  <div class="hero-bg">
+    <img src="img/hero-bg-1.webp" alt="" class="hero-bg__image hero-bg__image--active" data-bg-target="1">
+    <img src="img/hero-bg-2.webp" alt="" class="hero-bg__image" data-bg-target="2">
+    <img src="img/hero-bg-3.webp" alt="" class="hero-bg__image" data-bg-target="3">
   </div>
 </section>

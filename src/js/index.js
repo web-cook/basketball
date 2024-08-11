@@ -1,2 +1,2 @@
-// import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
+import heroSlider from './modules/hero-slider.js';
+heroSlider();

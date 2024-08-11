@@ -1,9 +1,26 @@
 .title-main {
-  &--hero {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--desktop-black);
 
+  &--hero {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--desktop-white);
   }
 }
 
 .title-second {
-  
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--desktop-black);
 }
