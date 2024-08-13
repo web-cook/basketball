@@ -197,15 +197,11 @@
     }
 
     .card__title {
-      white-space: pre-line;
+      max-width: 500px;
     }
   }
 
   &--tournaments {
-    .card__title {
-      white-space: pre-line;
-    }
-
     .card__text {
       max-width: 425px;
     }
