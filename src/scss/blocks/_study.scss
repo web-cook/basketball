@@ -5,6 +5,15 @@
   border-radius: 20px;
   background: var(--desktop-white);
 
+  @include laptop-l {
+    margin-top: 42px;
+  }
+
+  @include mobile-m {
+    padding: 0;
+    background: unset;
+  }
+
   &__top {
     display: flex;
     align-items: flex-end;
@@ -12,6 +21,9 @@
   }
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
   &__title {
@@ -23,19 +35,40 @@
     grid-template-rows: repeat(3, 4fr);
     grid-auto-flow: column;
     row-gap: 20px;
-    column-gap: 33px;
+    column-gap: 32px;
+
+    @include desktop-alt {
+      grid-template-columns: 1fr;
+    }
+
+    @include laptop-md {
+      grid-template-rows: repeat(2, 400px);
+    }
+
+    @include mobile-m {
+      row-gap: 8px;
+    }
   }
 
   &__link {
+    margin-bottom: 11px;
     display: flex;
     align-items: flex-end;
     gap: 12px;
+
+    @include mobile-m {
+      margin-bottom: 0;
+    }
 
     .to-section-link {
       color: var(--desktop-primary-green);
     }
     
     &-icon {
+      @include mobile-m {
+        display: none;
+      }
+
       path {
         fill: var(--desktop-primary-green);
       }

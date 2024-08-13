@@ -1,5 +1,6 @@
 :root {
 	--wrapper-padding: 20px;
+  --wrapper-padding-mobile: 12px;
 
 	--desktop-primary-orange: #f36722;
 	--desktop-hover-orange: #ff8b3d;
@@ -34,6 +35,14 @@
   --font-family: "Druk Wide Cyr", sans-serif;
   --second-family: "Inter", sans-serif;
 
-	--mobile-size: 320px;
   --transition-default: 0.7s all;
 }
+
+$desktop-size: 1920px;
+$desktop-size-alt: 1600px;
+$laptop-size-l: 1440px;
+$laptop-size-md: 1320px;
+$tablet-size: 992px;
+$mobile-size-l: 768px;
+$mobile-size-m: 576px;
+$mobile-size: 320px;

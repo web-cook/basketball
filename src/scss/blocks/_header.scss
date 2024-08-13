@@ -1,11 +1,35 @@
 .header {
   border-radius: 20px;
   background: var(--desktop-white);
-  
+
+  @include mobile-l {
+    border-radius: 10px;
+  }
+
   &__container {
     padding: 14px 20px;
     display: grid;
     grid-template-columns: calc(99px + 64px) auto 132px 205px;
     align-items: center;
+
+    @include laptop-md {
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @include mobile-m {
+      padding: 8px 12px;
+    }
+  }
+
+  &__logo {
+    @include laptop-md {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: center;
+    }
+
+    @include mobile-m {
+      width: 70px;
+    }
   }
 }

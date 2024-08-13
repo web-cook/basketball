@@ -1,4 +1,8 @@
 .nav {
+  @include laptop-md {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;

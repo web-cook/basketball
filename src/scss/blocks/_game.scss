@@ -1,6 +1,14 @@
 .game {
   margin-top: 120px;
 
+  @include laptop-l {
+    margin-top: 90px;
+  }
+
+  @include mobile-m {
+    margin-top: 42px;
+  }
+
   &__container {
   }
 
@@ -15,11 +23,20 @@
   }
 
   &__link {
+    margin-bottom: 11px;
     display: flex;
     align-items: flex-end;
     gap: 12px;
 
+    @include mobile-m {
+      margin-bottom: 0;
+    }
+
     &-icon {
+      @include mobile-m {
+        display: none;
+      }
+
       path {
         fill: var(--desktop-primary-orange);
       }
@@ -37,4 +54,8 @@
   line-height: 130%;
   text-transform: uppercase;
   color: var(--desktop-primary-orange);
+
+  @include mobile-m {
+    font-size: 14px;
+  }
 }

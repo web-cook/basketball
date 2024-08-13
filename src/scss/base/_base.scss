@@ -9,4 +9,15 @@ body {
   background-size: auto;
   background-position: bottom 0 right 0;
   background-repeat: no-repeat;
+
+  @include tablet {
+    background-size: 70%;
+  }
+
+  @include mobile-m {
+    background-image: url("../img/basketball-ball-bg-mobile.png");
+    background-size: auto;
+    background-position: bottom 59px right 0;
+    background-repeat: no-repeat;
+  }
 }

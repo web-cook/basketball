@@ -1,9 +1,21 @@
 .watch {
   margin-top: 120px;
 
+  @include laptop-l {
+    margin-top: 90px;
+  }
+
+  @include mobile-m {
+    margin-top: 42px;
+  }
+
   &__container {
     padding-top: 36px;
     position: relative;
+
+    @include mobile-m {
+      padding-top: 20px;
+    }
 
     &::before {
       content: '';
@@ -19,6 +31,16 @@
   &__title {
     margin-bottom: 32px;
     white-space: pre-line;
+
+    @include mobile-m {
+      margin-bottom: 20px;
+      white-space: normal;
+      width: 95%;
+
+      span {
+        display: block;
+      }
+    }
   }
 
   &__author-link {
@@ -32,5 +54,18 @@
     line-height: 140%;
     text-transform: uppercase;
     color: var(--desktop-black);
+
+    transition: var(--transition-default);
+
+    @include mobile-m {
+      margin-top: 165px;
+      margin-bottom: 12px;
+
+      font-size: 10px;
+    }
+
+    &:hover {
+      color: var(--desktop-primary-green);
+    }
   }
 }

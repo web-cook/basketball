@@ -4,8 +4,19 @@
   align-items: center;
   justify-content: space-between;
 
-  &__icon {
+  @include laptop-md {
+    grid-column: 1 / 2;
+  }
 
+  @include mobile-m {
+    padding: 0;
+  }
+
+  &__icon {
+    @include mobile-l {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__text {
@@ -15,5 +26,9 @@
     line-height: 140%;
     text-transform: uppercase;
     color: var(--desktop-black);
+
+    @include laptop-md {
+      display: none;
+    }
   }
 }

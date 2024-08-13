@@ -7,6 +7,12 @@
   align-items: center;
   justify-content: space-between;
 
+  @include laptop-md {
+    grid-column: 3 / 4;
+    background: unset;
+    justify-self: end;
+  }
+
   &__name {
     font-family: var(--font-family);
     font-weight: 700;
@@ -14,6 +20,10 @@
     line-height: 140%;
     text-transform: uppercase;
     color: var(--desktop-black);
+
+    @include laptop-md {
+      display: none;
+    }
   }
 
   &__photo {

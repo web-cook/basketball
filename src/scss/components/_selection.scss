@@ -3,17 +3,38 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 62px;
 
   border-radius: 14px;
   background: var(--desktop-primary-green);
+
+  @include mobile-l {
+    border-radius: 10px;
+  }
+
+  @include mobile-m {
+    padding: 12px;
+  }
   
   &__title {
+    max-width: 880px;
+
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 48px;
     line-height: 120%;
     text-transform: uppercase;
     color: var(--desktop-white);
+
+    @include laptop-md {
+      font-size: 36px;
+    }
+
+    @include mobile-m {
+      font-size: 20px;
+      line-height: 130%;
+      max-width: 75%;
+    }
   }
 
   &__buttons {
@@ -35,6 +56,11 @@
     line-height: 140%;
     text-transform: uppercase;
     color: var(--desktop-white);
+
+    @include mobile-m {
+      padding: 6px 12px;
+      font-size: 10px;
+    }
 
     &:last-child {
       background: var(--desktop-white);

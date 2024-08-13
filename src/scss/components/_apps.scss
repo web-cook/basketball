@@ -1,6 +1,10 @@
 .apps {
   display: flex;
   gap: 36px;
+
+  @include mobile-m {
+    flex-direction: column;
+  }
 }
 .app {
   display: flex;

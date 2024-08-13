@@ -4,6 +4,17 @@
   justify-content: space-between;
   gap: 8px;
   overflow: hidden;
+
+  @include laptop-md {
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 64px auto 0;
+  }
+
+  @include mobile-m {
+    margin-top: 21px;
+  }
 }
 .card {
   position: relative;
@@ -20,7 +31,21 @@
   transition: var(--transition-default);
   overflow: hidden;
 
-  &:hover {
+  @include desktop-alt {
+    min-height: unset;
+  }
+
+  @include mobile-l {
+    border-radius: 10px;
+  }
+
+  @include mobile-m {
+    padding-bottom: 12px;
+    gap: 28px;
+  }
+
+  &:hover,
+  &:focus {
     background: var(--desktop-black);
 
     .card__title {
@@ -48,6 +73,10 @@
   &__image {
     border-radius: 20px;
     transition: var(--transition-default);
+
+    @include mobile-l {
+      border-radius: 10px;
+    }
   }
 
   &__content {
@@ -57,6 +86,11 @@
     gap: 16px;
     transition: var(--transition-default);
     position: relative;
+
+    @include mobile-m {
+      gap: 8px;
+      padding: 0 12px;
+    }
   }
 
   &__title {
@@ -66,14 +100,24 @@
     line-height: 130%;
     text-transform: uppercase;
     color: var(--desktop-black);
+
+    @include mobile-m {
+      font-size: 20px;
+    }
   }
 
   &__text {
+    max-width: 440px;
+
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
     color: var(--desktop-black);
+
+    @include mobile-m {
+      font-size: 14px;
+    }
   }
 
   &__button {
@@ -100,6 +144,12 @@
     text-transform: uppercase;
     color: var(--desktop-white);
 
+    @include mobile-m {
+      padding: 16px 20px;
+
+      font-size: 14px;
+    }
+
     &-icon {
       position: absolute;
       right: 24px;
@@ -118,10 +168,27 @@
   }
 
   &--ball {
+    @include mobile-m {
+      min-height: 446px;
+    }
+
     .card__image {
       position: absolute;
       top: -108px;
       right: -188px;
+
+      @include laptop-md {
+        top: unset;
+
+        position: relative;
+        margin-top: -108px;
+        right: -188px;
+      }
+
+      @include mobile-m {
+        margin-top: -47px;
+        right: -77px;
+      }
     }
 
     .card__content {
@@ -132,10 +199,6 @@
     .card__title {
       white-space: pre-line;
     }
-
-    .card__text {
-      max-width: 440px;
-    }
   }
 
   &--tournaments {
@@ -144,7 +207,7 @@
     }
 
     .card__text {
-      max-width: 435px;
+      max-width: 425px;
     }
   }
 }
